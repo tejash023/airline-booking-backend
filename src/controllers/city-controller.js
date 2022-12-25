@@ -80,7 +80,7 @@ const get = async (req, res) => {
       success: true,
       message: 'City fetched successfully',
       err: {}
-    })
+    });
 
   }catch(error){
     console.log(error);
@@ -89,14 +89,37 @@ const get = async (req, res) => {
       success: false,
       message: 'Error in fetching city',
       err: error
-    })
+    });
   }
   
+}
+
+const getAll = async (req, res) => {
+
+  try{
+    const cities = await cityServices.getAllCities();
+    return res.status(201).json({
+      data: cities,
+      success: true,
+      message: 'Cities fetched successfully',
+      err: {}
+    });
+
+  }catch(error){
+    console.log(error);
+    return res.status(500).json({
+      data:{},
+      success: false,
+      message: 'Error in fetching city',
+      err: error
+    });
+  }
 }
 
 module.exports = {
   create,
   destroy,
   update,
-  get
+  get,
+  getAll
 }
