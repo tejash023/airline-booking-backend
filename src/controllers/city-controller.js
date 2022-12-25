@@ -1,4 +1,4 @@
-const { CityServices, CityServices } = require('../services/index');
+const { CityServices } = require('../services/index');
 
 const cityServices = new CityServices();
 
@@ -19,7 +19,7 @@ const create = async (req, res) => {
       data:{},
       success: false,
       message: 'Error in adding city',
-      err: error.message
+      err: error
     })
   }
 
@@ -88,7 +88,7 @@ const get = async (req, res) => {
       data:{},
       success: false,
       message: 'Error in fetching city',
-      err: error.message
+      err: error
     })
   }
   
