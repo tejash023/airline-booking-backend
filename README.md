@@ -1,5 +1,7 @@
 # Welcome to Flight Service
 
+## Users can search and find flights between two cities
+
 ## Project Setup
   
   - Clone the project on your local
