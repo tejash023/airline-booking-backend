@@ -1,4 +1,4 @@
-# Welcome to Flight Service
+# Welcome to Flights Search Service
 
 ## Users can search and find flights between two cities
 
